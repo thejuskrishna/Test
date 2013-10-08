@@ -10,6 +10,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.w3c.dom.Document;
@@ -29,6 +30,11 @@ public class Library {
 		{
 			driver = new FirefoxDriver();
 		}
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver", "libs/chromedriver.exe");
+			driver = new ChromeDriver();
+		}
 		
 		return driver;
 	}
@@ -36,6 +42,7 @@ public class Library {
 	public HashMap<String, String> readXML(String file) throws ParserConfigurationException, SAXException, IOException
 	{
 		String browser = null;
+		String cleanup = "no";
 		int i = 0;
 		HashMap<String, String> contents = new HashMap<>();;
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -47,10 +54,13 @@ public class Library {
 		{
 			Element elem = (Element) nodes.item(i);
 			browser = elem.getElementsByTagName("browser").item(0).getChildNodes().item(0).getNodeValue().trim();
+			cleanup = elem.getElementsByTagName("cleanup").item(0).getChildNodes().item(0).getNodeValue().trim();
 			i++;
 		}
 		
 		contents.put("browser", browser);
+		contents.put("cleanup", cleanup);
+		
 		return contents;
 	}
 }

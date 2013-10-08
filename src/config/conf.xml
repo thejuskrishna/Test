@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <run>
 	<browser>chrome</browser>    
-    
+    <cleanup>yes</cleanup>
 </run>
