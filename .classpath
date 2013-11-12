@@ -41,5 +41,8 @@
 	<classpathentry kind="lib" path="C:/Users/tkrishna/workspace2/Test/libs/xalan-2.7.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/tkrishna/workspace2/Test/libs/xercesImpl-2.10.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/tkrishna/workspace2/Test/libs/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tkrishna/workspace2/Test/libs/sikuli-ide.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tkrishna/workspace2/Test/libs/sikuli-java.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tkrishna/workspace2/Test/libs/sikuli-tessdata.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
