@@ -38,7 +38,7 @@ public class Library {
 		}
 		if(browser.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "libs/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "libs/chromedriver");
 			driver = new ChromeDriver();
 		}
 		
